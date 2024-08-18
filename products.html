@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Garments - Products</title>
+    <title>Products - Sai Garments</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="Sai Garments Logo">
         </div>
-        <h1>Sai Garments</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="products">
-            <h2>Our Products</h2>
-            <div class="product-list">
-                <div class="product">
-                    <img src="images/jeans1.jpg" alt="Classic Blue Jeans">
-                    <h3>Classic Blue Jeans</h3>
-                    <p class="price">$29.99</p>
-                    <button class="add-to-cart" data-product="Classic Blue Jeans" data-price="29.99">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="images/jeans2.jpg" alt="Trendy Black Jeans">
-                    <h3>Trendy Black Jeans</h3>
-                    <p class="price">$34.99</p>
-                    <button class="add-to-cart" data-product="Trendy Black Jeans" data-price="34.99">Add to Cart</button>
-                </div>
+        <h1>Our Products</h1>
+        <section id="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="images/product1.jpg" alt="Classic Skinny Jeans">
+                <h2>Classic Skinny Jeans</h2>
+                <p>Price: ₹850</p>
+                <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="images/product2.jpg" alt="High-Rise Denim">
+                <h2>High-Rise Denim</h2>
+                <p>Price: ₹950</p>
+                <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="images/product3.jpg" alt="Ripped Jeans">
+                <h2>Ripped Jeans</h2>
+                <p>Price: ₹1050</p>
+                <button class="add-to-cart" data-product-id="3">Add to Cart</button>
             </div>
         </section>
-        <section class="checkout">
-            <h2>Checkout</h2>
-            <div id="paypal-button-container"></div>
-        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Sai Garments. Contact us at <a href="mailto:info@saigarments.in">info@saigarments.in</a></p>
+        <p>&copy; 2024 Sai Garments. Contact us at <a href="mailto:aashutosh794@gmail.com">aashutosh794@gmail.com</a></p>
     </footer>
+
     <script src="scripts.js"></script>
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script>
-    <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '34.99' // Change to dynamic price if needed
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name);
-                });
-            }
-        }).render('#paypal-button-container');
-    </script>
 </body>
+
 </html>
