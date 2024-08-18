@@ -1,70 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Garments - Home</title>
+    <title>Sai Garments - MFG & Wholesale of Ladies & Girls Jeans</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Sai Garments Logo">
+            <img src="images/logo.jpeg" alt="Sai Garments">
         </div>
-        <h1>Sai Garments</h1>
+        <h1>Welcome to Sai Garments</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <img src="images/hero-banner.jpg" alt="Sai Garments Banner">
+            <img src="images/hero-jeans.jpg" alt="Jeans">
             <div class="hero-text">
-                <h2>Discover Your Perfect Fit</h2>
-                <p>High-quality jeans for ladies and girls, designed for comfort and style.</p>
+                <h2>Your One-Stop Jeans Wholesale Store</h2>
+                <p>High-quality Ladies & Girls Jeans at the Best Prices</p>
                 <a href="products.html" class="btn-primary">Shop Now</a>
             </div>
         </section>
-        <section class="features" id="features">
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Why Choose Sai Garments?</h2>
             <div class="feature">
-                <h3>Latest Trends</h3>
-                <p>Stay updated with the latest trends in jeans fashion.</p>
+                <h3>Quality Assurance</h3>
+                <p>Top-notch fabric and stitching for long-lasting wear.</p>
             </div>
             <div class="feature">
-                <h3>Unmatched Quality</h3>
-                <p>Our products are made with high-quality fabrics for durability and style.</p>
+                <h3>Best Prices</h3>
+                <p>Competitive wholesale rates for bulk purchases.</p>
             </div>
             <div class="feature">
-                <h3>Affordable Prices</h3>
-                <p>Get the best jeans at prices that won't break the bank.</p>
+                <h3>Trusted Suppliers</h3>
+                <p>Supplying to top retailers across the region.</p>
             </div>
         </section>
-        <section class="featured-products" id="featured-products">
-            <h2>Featured Products</h2>
-            <div class="product-list">
-                <div class="product">
-                    <img src="images/jeans1.jpg" alt="Classic Blue Jeans">
-                    <h3>Classic Blue Jeans</h3>
-                    <p class="price">$29.99</p>
-                    <button class="add-to-cart" data-product="Classic Blue Jeans" data-price="29.99">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="images/jeans2.jpg" alt="Trendy Black Jeans">
-                    <h3>Trendy Black Jeans</h3>
-                    <p class="price">$34.99</p>
-                    <button class="add-to-cart" data-product="Trendy Black Jeans" data-price="34.99">Add to Cart</button>
-                </div>
+
+        <!-- Product Section with 3D Images -->
+        <section id="featured-products" class="product-list">
+            <h2>Our Featured Products</h2>
+            <div class="product">
+                <h3>Classic Skinny Jeans</h3>
+                <div class="product-3d" id="jeans-model-1"></div>
+                <p class="price">₹850</p>
+                <button class="add-to-cart" data-product="Classic Skinny Jeans" data-price="850">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>High-Rise Denim</h3>
+                <div class="product-3d" id="jeans-model-2"></div>
+                <p class="price">₹950</p>
+                <button class="add-to-cart" data-product="High-Rise Denim" data-price="950">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Ripped Jeans</h3>
+                <div class="product-3d" id="jeans-model-3"></div>
+                <p class="price">₹1050</p>
+                <button class="add-to-cart" data-product="Ripped Jeans" data-price="1050">Add to Cart</button>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Sai Garments. Contact us at <a href="mailto:info@saigarments.in">info@saigarments.in</a></p>
+        <p>&copy; 2024 Sai Garments. Contact us at <a href="mailto:aashutosh794@gmail.com">aashutosh794@gmail.com</a></p>
     </footer>
     <script src="scripts.js"></script>
 </body>
+
 </html>
