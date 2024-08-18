@@ -1,31 +1,20 @@
-// Initialize cart
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+document.addEventListener('DOMContentLoaded', () => {
+    const cart = [];
 
-// Update cart count
-function updateCartCount() {
-    document.getElementById('cart-count').textContent = cart.length;
-}
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.getAttribute('data-product');
+            const productPrice = parseFloat(button.getAttribute('data-price'));
 
-// Add to cart
-function addToCart(productName, productPrice) {
-    cart.push({ name: productName, price: productPrice });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-}
-
-// Display cart items
-function displayCart() {
-    let cartItems = document.getElementById('cart-items');
-    let total = 0;
-    cartItems.innerHTML = '';
-    cart.forEach(item => {
-        cartItems.innerHTML += `<p>${item.name} - $${item.price.toFixed(2)}</p>`;
-        total += item.price;
+            cart.push({ name: productName, price: productPrice });
+            alert(`${productName} added to cart.`);
+            console.log('Cart:', cart);
+        });
     });
-    document.getElementById('cart-total').textContent = total.toFixed(2);
-}
 
-// On page load for cart page
-if (document.getElementById('cart-items')) {
-    displayCart();
-}
+    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        document.getElementById('contact-form').reset();
+    });
+});
