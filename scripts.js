@@ -1,4 +1,28 @@
-// Function to update cart
+document.addEventListener('DOMContentLoaded', () => {
+    updateCart();
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const productId = button.getAttribute('data-product-id');
+            addToCart(productId);
+        });
+    });
+});
+
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProduct = cart.find(item => item.id === parseInt(productId));
+
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ id: parseInt(productId), quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
+}
+
 function updateCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.querySelector('.cart-items');
@@ -7,7 +31,6 @@ function updateCart() {
     let total = 0;
 
     cart.forEach(item => {
-        // Static product data for demonstration purposes
         const product = {
             1: { name: 'Classic Skinny Jeans', price: 850 },
             2: { name: 'High-Rise Denim', price: 950 },
@@ -26,30 +49,3 @@ function updateCart() {
 
     cartTotal.textContent = `Total: ₹${total}`;
 }
-
-// Function to add product to cart
-function addToCart(productId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const existingProduct = cart.find(item => item.id === parseInt(productId));
-
-    if (existingProduct) {
-        existingProduct.quantity += 1;
-    } else {
-        cart.push({ id: parseInt(productId), quantity: 1 });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCart();
-}
-
-// Event listeners
-document.addEventListener('DOMContentLoaded', () => {
-    updateCart(); // Update cart on page load
-
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.getAttribute('data-product-id');
-            addToCart(productId);
-        });
-    });
-});
