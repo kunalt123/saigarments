@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Sai Garments</title>
+    <title>Cart - Sai Garments</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,39 +17,18 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Our Products</h1>
-        <section id="products">
-            <!-- Product 1 -->
-            <div class="product">
-                <img src="images/product1.jpg" alt="Classic Skinny Jeans">
-                <h2>Classic Skinny Jeans</h2>
-                <p>Price: ₹850</p>
-                <button class="add-to-cart" data-product-id="1" data-product-name="Classic Skinny Jeans" data-product-price="850">Add to Cart</button>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product">
-                <img src="images/product2.jpg" alt="High-Rise Denim">
-                <h2>High-Rise Denim</h2>
-                <p>Price: ₹950</p>
-                <button class="add-to-cart" data-product-id="2" data-product-name="High-Rise Denim" data-product-price="950">Add to Cart</button>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product">
-                <img src="images/product3.jpg" alt="Ripped Jeans">
-                <h2>Ripped Jeans</h2>
-                <p>Price: ₹1050</p>
-                <button class="add-to-cart" data-product-id="3" data-product-name="Ripped Jeans" data-product-price="1050">Add to Cart</button>
-            </div>
+        <h1>Your Cart</h1>
+        <section id="cart">
+            <div class="cart-items"></div>
+            <div id="cart-total">Total: ₹0</div>
         </section>
     </main>
 
