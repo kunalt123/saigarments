@@ -1,15 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    updateCart();
-
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.getAttribute('data-product-id');
-            addToCart(productId);
-        });
-    });
-});
-
 function addToCart(productId) {
+    console.log('Adding product ID:', productId); // Check if this logs
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProduct = cart.find(item => item.id === parseInt(productId));
 
@@ -24,6 +14,7 @@ function addToCart(productId) {
 }
 
 function updateCart() {
+    console.log('Updating cart'); // Check if this logs
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.querySelector('.cart-items');
     const cartTotal = document.getElementById('cart-total');
