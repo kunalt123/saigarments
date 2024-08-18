@@ -8,27 +8,47 @@
 </head>
 <body>
     <header>
-        <h1>Sai Garments</h1>
+        <div class="logo">
+            <h1>Sai Garments</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
-    
     <main>
-        <section>
-            <h2>Welcome to Sai Garments</h2>
-            <p>We specialize in the manufacturing and wholesale of ladies' and girls' jeans. Discover our products and contact us for bulk orders.</p>
+        <section class="hero">
+            <img src="images/hero-jeans.jpg" alt="Featured Jeans">
+            <div class="hero-text">
+                <h2>Discover Your Perfect Pair</h2>
+                <p>Explore our latest collection of stylish and comfortable jeans for ladies and girls.</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+        </section>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="images/jeans1.jpg" alt="Classic Blue Jeans">
+                    <h3>Classic Blue Jeans</h3>
+                    <p class="price">$29.99</p>
+                    <button class="add-to-cart" data-product="Classic Blue Jeans" data-price="29.99">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/jeans2.jpg" alt="Trendy Black Jeans">
+                    <h3>Trendy Black Jeans</h3>
+                    <p class="price">$34.99</p>
+                    <button class="add-to-cart" data-product="Trendy Black Jeans" data-price="34.99">Add to Cart</button>
+                </div>
+            </div>
         </section>
     </main>
-    
     <footer>
-        <p>&copy; 2024 Sai Garments. All rights reserved.</p>
+        <p>&copy; 2024 Sai Garments. Contact us at <a href="mailto:info@saigarments.in">info@saigarments.in</a></p>
     </footer>
     <script src="scripts.js"></script>
 </body>
